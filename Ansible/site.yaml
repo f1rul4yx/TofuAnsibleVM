@@ -1,0 +1,5 @@
+- hosts: servidores
+  become: true
+  roles:
+   - role: commons
+   - role: example

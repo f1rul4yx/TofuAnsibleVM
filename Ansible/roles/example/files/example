@@ -1,0 +1,4 @@
+# Archivos estáticos que se copian tal cual a los hosts:
+#   - No se procesan
+#   - No usan variables
+#   - Se copian byte a byte

@@ -1,0 +1,21 @@
+# La lógica principal del rol:
+#   - Ficheros YAML con tareas Ansible
+#   - Usan módulos (package, service, template, etc.)
+
+- name: Instalar paquetes
+  apt:
+    name:
+      - neovim
+      - lsd
+      - nginx
+    state: present
+    update_cache: yes
+
+- name: Activación del VirtualHost
+  file:
+    src: /etc/nginx/sites-available/{{ item["name"] }}
+    dest: /etc/nginx/sites-enabled/{{ item["name"] }}
+    state: link
+  with_items:
+    - "{{ virtualhosts }}"
+  notify: restart nginx

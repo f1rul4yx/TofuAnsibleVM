@@ -1,0 +1,8 @@
+# Fichero para definir variables globales, se escribe en YAML.
+
+virtualhosts:
+  - name: example
+    datos:
+      example: example
+
+example: example

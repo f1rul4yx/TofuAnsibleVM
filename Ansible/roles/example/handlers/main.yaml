@@ -1,0 +1,6 @@
+# Acciones que solo se ejecutan cuando algo cambia:
+#   - Normalmente reinicios o recargas
+#   - Se disparan con notify
+
+- name: restart nginx
+  service: name=nginx state=restarted

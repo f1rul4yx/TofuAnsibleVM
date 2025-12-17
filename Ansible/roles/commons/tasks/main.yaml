@@ -1,0 +1,8 @@
+- name: Actualizar el sistema y los paquetes
+  apt:
+    update_cache: yes
+    upgrade: yes
+    cache_valid_time: 3600
+
+# Lista de módulos:
+#   - https://docs.ansible.com/projects/ansible/latest/collections/index_module.html

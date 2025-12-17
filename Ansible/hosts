@@ -1,0 +1,8 @@
+all:
+  children:
+    servidores:
+      hosts:
+        name:
+          ansible_host: 192.168.1.100
+          ansible_user: debian
+          ansible_ssh_private_key_file: ~/.ssh/keys/f1rul4yx
