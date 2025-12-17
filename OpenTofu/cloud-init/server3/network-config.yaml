@@ -1,0 +1,11 @@
+network:
+  version: 2
+  ethernets:
+    ens3:
+      dhcp4: true
+    ens4:
+      dhcp4: false
+      addresses: ["123.123.123.2/24"]
+    ens5:
+      dhcp4: false
+      addresses: ["172.16.0.1/16"]

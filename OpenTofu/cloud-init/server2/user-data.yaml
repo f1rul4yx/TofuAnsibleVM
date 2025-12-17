@@ -1,7 +1,7 @@
 #cloud-config
 
 # Nombre del host
-hostname: cliente
+hostname: router
 
 # Actualizar paquetes
 package_update: true
@@ -21,3 +21,9 @@ chpasswd:
     - name: debian
       password: debian
       type: text
+
+# Comandos al primer arranque
+runcmd:
+  # Habilitar forwarding IPv4
+  - echo "net.ipv4.ip_forward=1" > /etc/sysctl.d/99-forward.conf
+  - sysctl --system

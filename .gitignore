@@ -1,0 +1,4 @@
+OpenTofu/.terraform.lock.hcl
+OpenTofu/.terraform/
+OpenTofu/terraform.tfstate
+OpenTofu/terraform.tfstate.backup
