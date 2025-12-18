@@ -47,7 +47,7 @@ locals {
 
   servers = {
     server1 = {
-      name       = "cliente"
+      name       = "cliente1"
       memory     = 1024
       vcpu       = 1
       base_image = "debian-13-generic-amd64.qcow2"
@@ -62,7 +62,7 @@ locals {
     }
 
     server2 = {
-      name       = "router"
+      name       = "vpn1"
       memory     = 1024
       vcpu       = 1
       base_image = "debian-13-generic-amd64.qcow2"
@@ -78,7 +78,7 @@ locals {
     }
 
     server3 = {
-      name       = "vpn"
+      name       = "vpn2"
       memory     = 1024
       vcpu       = 1
       base_image = "debian-13-generic-amd64.qcow2"
@@ -94,7 +94,7 @@ locals {
     }
 
     server4 = {
-      name       = "maquina-interna"
+      name       = "cliente2"
       memory     = 1024
       vcpu       = 1
       base_image = "debian-13-generic-amd64.qcow2"

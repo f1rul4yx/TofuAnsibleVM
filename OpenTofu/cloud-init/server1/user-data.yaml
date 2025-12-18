@@ -1,7 +1,7 @@
 #cloud-config
 
 # Nombre del host
-hostname: cliente
+hostname: cliente1
 
 # Actualizar paquetes
 package_update: true

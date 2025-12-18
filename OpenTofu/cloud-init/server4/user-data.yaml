@@ -1,7 +1,7 @@
 #cloud-config
 
 # Nombre del host
-hostname: maquina-interna
+hostname: cliente2
 
 # Actualizar paquetes
 package_update: true

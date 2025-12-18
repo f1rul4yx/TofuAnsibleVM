@@ -1,7 +1,7 @@
 #cloud-config
 
 # Nombre del host
-hostname: vpn
+hostname: vpn2
 
 # Actualizar paquetes
 package_update: true
