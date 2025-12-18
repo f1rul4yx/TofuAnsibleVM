@@ -35,6 +35,23 @@ sudo qemu-img resize /var/lib/libvirt/images/debian-13-generic-amd64.qcow2 20G
 
 ---
 
+## Ajuste necesario de AppArmor para libvirt
+
+En Debian, **AppArmor restringe por defecto el acceso de QEMU a los discos** `.qcow2`, lo que puede provocar errores al crear o arrancar las máquinas virtuales con OpenTofu/Terraform.
+
+Para evitarlo, es necesario **permitir explícitamente el acceso de lectura/escritura a las imágenes qcow2** usadas por libvirt.
+
+Editar el fichero `/etc/apparmor.d/libvirt/TEMPLATE.qemu`.
+
+```apparmor
+profile LIBVIRT_TEMPLATE flags=(attach_disconnected) {
+  #include <abstractions/libvirt-qemu>
+  /var/lib/libvirt/images/*.qcow2 rwk,
+}
+```
+
+---
+
 ## Creación del escenario
 
 ```bash
